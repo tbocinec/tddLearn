@@ -1,0 +1,15 @@
+{
+    "/js/app.js": "/js/app.js",
+    "/css/app.css": "/css/app.css",
+    "/css/main.css": "/css/main.css",
+    "/js/libscripts.bundle.js": "/js/libscripts.bundle.js",
+    "/js/vendorscripts.bundle.js": "/js/vendorscripts.bundle.js",
+    "/js/morphingsearchscripts.bundle.js": "/js/morphingsearchscripts.bundle.js",
+    "/js/mainscripts.bundle.js": "/js/mainscripts.bundle.js",
+    "/js/flotscripts.bundle.js": "/js/flotscripts.bundle.js",
+    "/js/chartscripts.bundle.js": "/js/chartscripts.bundle.js",
+    "/js/datatablescripts.bundle.js": "/js/datatablescripts.bundle.js",
+    "/js/morrisscripts.bundle.js": "/js/morrisscripts.bundle.js",
+    "/js/flotchartsscripts.bundle.js": "/js/flotchartsscripts.bundle.js",
+    "/js/jvectormapscripts.bundle.js": "/js/jvectormapscripts.bundle.js"
+}
