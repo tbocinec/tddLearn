@@ -18,6 +18,7 @@
             <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Dept. Name: activate to sort column ascending" style="width: 156px;">Email</th>
 
             <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Brief: activate to sort column ascending" style="width: 500px;">Name</th>
+            <th  tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Brief: activate to sort column ascending" style="width: 500px;">Photo</th>
             <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Brief: activate to sort column ascending" style="width: 500px;"> Role</th>
             <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Brief: activate to sort column ascending" style="width: 500px;"> Actvie</th>
             <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Brief: activate to sort column ascending" style="width: 500px;">Created at</th>
@@ -29,7 +30,8 @@
             <tr role="row" class="odd">
                 <td class="sorting_1">{{$user->id}}</td>
                 <td>{{$user->email}}</td>
-                <td>{{$user->name}}</td>
+                <td><a href="{{route('users.edit',$user->id)}}"> {{$user->name}}</a></td>
+                <td>{{$user->photo? str_limit($user->photo->file,$limit = 15,$end=".."):'no user photo'}}</td>
                 <td>{{$user->role->name}}</td>
                 <td>{{$user->is_active}}</td>
                 <td>{{$user->created_ad}}</td>
