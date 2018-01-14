@@ -60,6 +60,17 @@ mix.scripts([
     'resources/assets/plugins/jquery-datatable/dataTables.bootstrap4.min.js'
 ], 'public/js/datatablescripts.bundle.js');
 
+///* Jquery DataTable Plugin 2 Js  */
+mix.scripts([
+     'resources/assets/plugins/jquery-datatable/jquery.dataTables.min.js',
+     'resources/assets/plugins/jquery-datatable/dataTables.bootstrap4.min.js',
+     'resources/assets/plugins/jquery-datatable/buttons/buttons.colVis.min.js',
+
+     'resources/assets/js/pages/tables/jquery-datatable.js'
+
+], 'public/js/datatablescriptsplus.bundle.js');
+
+
 //* Morris Plugin Js*/
 mix.scripts([
     'resources/assets/plugins/raphael/raphael.min.js',
@@ -86,5 +97,4 @@ mix.scripts([
 mix.scripts([
     'resources/assets/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js',
     'resources/assets/plugins/jvectormap/jquery-jvectormap-world-mill-en.js'
-
 ], 'public/js/jvectormapscripts.bundle.js');

@@ -12,25 +12,21 @@
             <form class="form-horizontal" method="POST" action="{{ route('login') }}">
                 {{ csrf_field() }}
 
-
-
-
-
                 <div class="input-group"> <span class="input-group-addon"> <i class="zmdi zmdi-account"></i> </span>
-                    <div class="form-line">
+                    <div class="form-line {{ $errors->has('email') ? ' error' : '' }}">
                         @if ($errors->has('email'))
                             <span class="help-block">
-                                        <strong>{{ $errors->first('email') }}</strong>
+                                        <strong class="font-bold col-pink">{{ $errors->first('email') }}</strong>
                                     </span>
                         @endif
                         <input type="text" id="email"   value="{{ old('email') }}" class="form-control" name="email" placeholder="email" required autofocus>
                     </div>
                 </div>
                 <div class="input-group"> <span class="input-group-addon"> <i class="zmdi zmdi-lock"></i> </span>
-                    <div class="form-line">
+                    <div class="form-line {{ $errors->has('password') ? ' error' : '' }}">
                         @if ($errors->has('password'))
                             <span class="help-block">
-                                        <strong>{{ $errors->first('password') }}</strong>
+                                        <strong class="font-bold col-pink">{{ $errors->first('password') }}</strong>
                             </span>
                         @endif
                         <input type="password" class="form-control" name="password" placeholder="Password" required>

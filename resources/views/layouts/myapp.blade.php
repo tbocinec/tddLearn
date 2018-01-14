@@ -97,5 +97,7 @@
 <script src="{{ asset('js/vendorscripts.bundle.js') }}"></script>
 <script src="{{ asset('js/morphingsearchscripts.bundle.js') }}"></script>
 <script src="{{ asset('js/mainscripts.bundle.js') }}"></script>
+
+<script src="{{ asset('js/datatablescriptsplusd.bundle.js') }}"></script>
 </body>
 </html>

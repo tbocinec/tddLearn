@@ -9,6 +9,7 @@
     "/js/flotscripts.bundle.js": "/js/flotscripts.bundle.js",
     "/js/chartscripts.bundle.js": "/js/chartscripts.bundle.js",
     "/js/datatablescripts.bundle.js": "/js/datatablescripts.bundle.js",
+    "/js/datatablescriptsplus.bundle.js": "/js/datatablescriptsplus.bundle.js",
     "/js/morrisscripts.bundle.js": "/js/morrisscripts.bundle.js",
     "/js/flotchartsscripts.bundle.js": "/js/flotchartsscripts.bundle.js",
     "/js/jvectormapscripts.bundle.js": "/js/jvectormapscripts.bundle.js"
