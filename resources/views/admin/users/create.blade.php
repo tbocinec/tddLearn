@@ -37,7 +37,7 @@
                 <div class="form-group">
                     <div class="input-group"> <span class="input-group-addon"> <i class="material-icons">person</i> </span>
                         <div class="form-line">
-                            {!! Form::file('file',null,['class'=>"form-control ",'placeholder' => 'Fotka']) !!}
+                            {!! Form::file('photo_id',null,['class'=>"form-control ",'placeholder' => 'Fotka']) !!}
                         </div>
                     </div>
                 </div>
