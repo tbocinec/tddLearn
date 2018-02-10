@@ -4,9 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Role extends Model
+class ProgramingLanguage extends Model
 {
     protected $fillable = [
-        'name'
+        'id', 'name', 'compiler_url','active',
     ];
 }

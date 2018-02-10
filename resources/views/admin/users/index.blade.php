@@ -7,6 +7,10 @@
 
 <br>  <br>  <br>  <br>  <br>
 
+@if(Session::has('deleted_user'))
+    <p class="bg-danger">{{session('deleted_user')}} </p>
+@endif
+
 @if(@users)
 
 
@@ -23,6 +27,7 @@
             <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Brief: activate to sort column ascending" style="width: 500px;"> Actvie</th>
             <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Brief: activate to sort column ascending" style="width: 500px;">Created at</th>
             <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Brief: activate to sort column ascending" style="width: 500px;">updated at</th>
+
 
         </thead>
         <tbody>

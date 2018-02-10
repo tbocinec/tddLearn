@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePhotesTable extends Migration
+class CreateProgramingLanguagesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,11 @@ class CreatePhotesTable extends Migration
      */
     public function up()
     {
-        Schema::create('photos', function (Blueprint $table) {
+        Schema::create('programing_languages', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('file');
+            $table->string("name");
+            $table->string("compiler_url");
+            $table->integer("active");
             $table->timestamps();
         });
     }
@@ -27,6 +29,6 @@ class CreatePhotesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('photos');
+        Schema::dropIfExists('programing_languages');
     }
 }

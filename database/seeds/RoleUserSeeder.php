@@ -11,6 +11,18 @@ class RoleUserSeeder extends Seeder
      */
     public function run()
     {
-        //
+        DB::table('roles')->delete();
+
+        DB::table('roles')->insert([
+            [
+                'name' => 'Administrátor'
+            ],
+            [
+                'name' => 'Študent'
+            ],
+            [
+                'name' => 'Učiteľ'
+            ],
+        ]);
     }
 }

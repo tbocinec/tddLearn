@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePhotesTable extends Migration
+class CreateSolutionCodesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,12 @@ class CreatePhotesTable extends Migration
      */
     public function up()
     {
-        Schema::create('photos', function (Blueprint $table) {
+        Schema::create('solution_codes', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('file');
+            $table->integer('user_id')->unsigned()->index();
+            $table->integer('task_id')->unsigned()->index();
+            $table->string('title');
+            $table->longText('code');
             $table->timestamps();
         });
     }
@@ -27,6 +30,6 @@ class CreatePhotesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('photos');
+        Schema::dropIfExists('solution_codes');
     }
 }

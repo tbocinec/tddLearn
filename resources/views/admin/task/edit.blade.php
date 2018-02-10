@@ -3,15 +3,16 @@
 @extends('layouts.myapp')
 
 @section('content')
-    <h1>Edit user</h1>
+    <h1>EDIT TASK</h1>
 
     <br>  <br>  <br>  <br>  <br>
 
     @include('layouts.component.validate')
 
+    {!! Form::model($task,['method'=>'PATCH', 'action' => ['AdminTaskController@update',$task->id],'files'=>true]) !!}
 
-    {!! Form::model($user,['method'=>'PATCH', 'action' => ['AdminUsersController@update',$user->id],'files'=>true]) !!}
     {{ csrf_field() }}
+
     <div class="row clearfix">
         <div class="col-md-4">
             <div class="form-group">
@@ -27,7 +28,21 @@
             <div class="form-group">
                 <div class="input-group"> <span class="input-group-addon"> <i class="material-icons">person</i> </span>
                     <div class="form-line">
-                        {!! Form::password('password',['class'=>"form-control ",'placeholder' => 'Heslo']) !!}
+                        {!! Form::text('description',null,['class'=>"form-control",'placeholder' => 'Description']) !!}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <div class="col-md-4">
+            <div class="form-group">
+                <div class="input-group"> <span class="input-group-addon"> <i class="material-icons">person</i> </span>
+                    <div class="form-line">
+                        {!! Form::select('active',array(1=>"Active",0=>"Not Active"),0,['class'=>"form-control show-tick",'placeholder' => 'Status']) !!}
                     </div>
                 </div>
             </div>
@@ -37,7 +52,7 @@
             <div class="form-group">
                 <div class="input-group"> <span class="input-group-addon"> <i class="material-icons">person</i> </span>
                     <div class="form-line">
-                        {!! Form::file('photo_id',null,['class'=>"form-control ",'placeholder' => 'Fotka']) !!}
+                        {!! Form::select('programingLanguage_id',$programingLanguage,null,['class'=>"form-control show-tick",'placeholder' => 'Programovací jazyk']) !!}
                     </div>
                 </div>
             </div>
@@ -47,62 +62,23 @@
             <div class="form-group">
                 <div class="input-group"> <span class="input-group-addon"> <i class="material-icons">person</i> </span>
                     <div class="form-line">
-                        {!! Form::email('email',null,['class'=>"form-control",'placeholder' => 'Email']) !!}
+                        {!! Form::select('categoryTask_id',$categoryTask,null,['class'=>"form-control show-tick",'placeholder' => 'Kategoria']) !!}
                     </div>
                 </div>
             </div>
         </div>
 
 
-        <div class="col-md-4">
-            <div class="form-group">
-                <div class="input-group"> <span class="input-group-addon"> <i class="material-icons">person</i> </span>
-                    <div class="form-line">
-                        {!! Form::select('is_active',array(1=>"Active",0=>"Not Active"),null,['class'=>"form-control show-tick",'placeholder' => 'Status']) !!}
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-4">
-            <div class="form-group">
-                <div class="input-group"> <span class="input-group-addon"> <i class="material-icons">person</i> </span>
-                    <div class="form-line">
-                        {!! Form::select('role_id',$roles,null,['class'=>"form-control show-tick",'placeholder' => 'Rola']) !!}
-                    </div>
-                </div>
-            </div>
-        </div>
 
 
         <div class="col-12">
-            {!! Form::submit('Edit User',['class'=>"btn btn-raised waves-effect g-bg-blush2"]) !!}
+            {!! Form::submit('Edit Task',['class'=>"btn btn-raised waves-effect g-bg-blush2"]) !!}
         </div>
-        </div>
-        {!! Form::close() !!}
-        <div class="row clearfix">
-        {!! Form::open(['method'=>'DELETE', 'action' => ['AdminUsersController@destroy',$user->id]]) !!}
-        {{ csrf_field() }}
-        <div class="col-12">
-            {!! Form::submit('Delete users',['class'=>"btn btn-raised waves-effect g-bg-blush2"]) !!}
-        </div>
-        </div>
-        {!! Form::close() !!}
 
 
 
 
+    </div>
 
-
-
-
-
-
-
-
-
-
-
-    <br>  <br>  <br>  <br>  <br>
 
 @endsection
