@@ -5,7 +5,7 @@
 <div class="container">
     <div class="card-top"></div>
     <div class="card">
-        <h1 class="title"><span>Swift University</span>Login <span class="msg">Sign in to start your session</span></h1>
+        <h1 class="title"><span>FMPH LEARN</span>Login <span class="msg">Sign in to start your session</span></h1>
         <div class="col-sm-12">
 
                 <form class="form-horizontal" method="POST" action="{{ route('login') }}">

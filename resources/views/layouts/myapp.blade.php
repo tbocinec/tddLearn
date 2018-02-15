@@ -42,7 +42,7 @@
 <!-- Top Bar -->
 <nav class="navbar clearHeader">
     <div class="col-12">
-        <div class="navbar-header"> <a href="javascript:void(0);" class="bars"></a> <a class="navbar-brand" href="index.html">Swift University</a> </div>
+        <div class="navbar-header"> <a href="javascript:void(0);" class="bars"></a> <a class="navbar-brand" href="index.html">FMPH LEARN</a> </div>
         <ul class="nav navbar-nav navbar-right">
             @include('layouts.component.notify')
 
@@ -98,6 +98,7 @@
 <script src="{{ asset('js/morphingsearchscripts.bundle.js') }}"></script>
 <script src="{{ asset('js/mainscripts.bundle.js') }}"></script>
 
-<script src="{{ asset('js/datatablescriptsplusd.bundle.js') }}"></script>
+<script src="{{ asset('js/datatablescriptsplus.bundle.js') }}"></script>
+@yield('javascript')
 </body>
 </html>

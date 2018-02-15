@@ -71,6 +71,7 @@ mix.scripts([
 ], 'public/js/datatablescriptsplus.bundle.js');
 
 
+
 //* Morris Plugin Js*/
 mix.scripts([
     'resources/assets/plugins/raphael/raphael.min.js',
@@ -98,3 +99,16 @@ mix.scripts([
     'resources/assets/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js',
     'resources/assets/plugins/jvectormap/jquery-jvectormap-world-mill-en.js'
 ], 'public/js/jvectormapscripts.bundle.js');
+
+
+//editor ACE
+mix.scripts([
+    'resources/assets/plugins/ace/ace.js'
+], 'public/js/ace/ace.js');
+mix.scripts([
+    'resources/assets/plugins/ace/theme-eclipse.js'
+], 'public/js/ace/theme-eclipse.js');
+
+mix.scripts([
+    'resources/assets/plugins/ace/mode-python.js'
+], 'public/js/ace/mode-python.js');

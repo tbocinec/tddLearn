@@ -18,4 +18,8 @@ class Task extends Model
         return $this->belongsTo('App\CategoryTask','categoryTask_id');
     }
 
+    public function level()
+    {
+        return $this->hasMany('App\TaskLevel');
+    }
 }

@@ -5,7 +5,7 @@
  <div class="container">
     <div class="card-top"></div>
     <div class="card">
-        <h1 class="title"><span>Swift University</span>Forgot Password? <div class="msg">Enter your e-mail address below to reset your password.</div></h1>
+        <h1 class="title"><span>FMPH LEARN</span>Forgot Password? <div class="msg">Enter your e-mail address below to reset your password.</div></h1>
         <div class="col-sm-12">
             @if (session('status'))
                 <div class="alert alert-success">

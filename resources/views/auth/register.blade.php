@@ -4,7 +4,7 @@
 <div class="container">
     <div class="card-top"></div>
     <div class="card">
-        <h1 class="title"><span>Swift University</span>Register <span class="msg">Register a new membership</span></h1>
+        <h1 class="title"><span>FMPH LEARN</span>Register <span class="msg">Register a new membership</span></h1>
         <div class="col-sm-12">
             <form class="form-horizontal" method="POST" action="{{ route('register') }}">
                 {{ csrf_field() }}

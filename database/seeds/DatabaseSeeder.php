@@ -18,6 +18,8 @@ class DatabaseSeeder extends Seeder
 
         $this->call(Category_tasksSeeder::class);
         $this->call(TaskSeeder::class);
+        $this->call(taskLevelSeeder::class);
+        $this->call(TaskTestSeeder::class);
 
     }
 }

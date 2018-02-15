@@ -11,6 +11,7 @@
     <p class="bg-danger">{{session('deleted_task')}} </p>
 @endif
 
+<a href="/admin/task/create">Create new task</a>
 @if(@tasks)
 
 
@@ -27,7 +28,7 @@
             <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Brief: activate to sort column ascending" style="width: 500px;"> Active </th>
             <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Brief: activate to sort column ascending" style="width: 500px;">Created at</th>
             <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Brief: activate to sort column ascending" style="width: 500px;">updated at</th>
-
+            <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Brief: activate to sort column ascending" style="width: 500px;">EDIT</th>
 
         </thead>
         <tbody>
@@ -35,7 +36,7 @@
             <tr role="row" class="odd">
                  {{--{{dd($task)}}--}}
                 <td class="sorting_1">{{$task->id}}</td>
-                <td><a href="{{route('task.edit',$task->id)}}"> {{$task->name}}</a></td>
+                <td><a href="{{route('task.show',$task->id)}}"> {{$task->name}}</a></td>
 
                 <td>{{$task->category->name}}</td>
                 <td>{{$task->programingLanguage->name}}</td>
@@ -44,6 +45,7 @@
 
                 <td>{{$task->created_at}}</td>
                 <td>{{$task->updated_at}}</td>
+                <td><a href="{{route('task.edit',$task->id)}}"> EDIT</a></td>
 
             </tr>
 

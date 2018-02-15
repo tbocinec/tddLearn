@@ -18,6 +18,13 @@
     <h3>Level List</h3>
 
 
+    <ol>
+    @foreach( $task->level as $level)
+            <li><a href="/admin/task/{{$task->id}}/task-level/{{$level->id}}"> {{$level->name}}</a></li>
+    @endforeach
+    </ol>
+    <a href="/admin/task/{{$task->id}}/task-level/create"> Create new level </a>
+
 
 
 

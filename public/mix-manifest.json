@@ -12,5 +12,8 @@
     "/js/datatablescriptsplus.bundle.js": "/js/datatablescriptsplus.bundle.js",
     "/js/morrisscripts.bundle.js": "/js/morrisscripts.bundle.js",
     "/js/flotchartsscripts.bundle.js": "/js/flotchartsscripts.bundle.js",
-    "/js/jvectormapscripts.bundle.js": "/js/jvectormapscripts.bundle.js"
+    "/js/jvectormapscripts.bundle.js": "/js/jvectormapscripts.bundle.js",
+    "/js/ace/ace.js": "/js/ace/ace.js",
+    "/js/ace/theme-eclipse.js": "/js/ace/theme-eclipse.js",
+    "/js/ace/mode-python.js": "/js/ace/mode-python.js"
 }
