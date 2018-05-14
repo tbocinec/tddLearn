@@ -11,7 +11,7 @@ class Task extends Model
     protected $fillable = ['name','description','programingLanguage_id','categoryTask_id','active'];
 
     public  function programingLanguage(){
-        return $this->belongsTo('App\ProgramingLanguage','programingLanguage_id');
+        return $this->belongsTo('App\Language','programingLanguage_id');
     }
 
     public  function category(){

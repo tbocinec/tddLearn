@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\CategoryTask;
 use App\Language;
 
-use App\Task;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Lang;
+use Illuminate\Support\Facades\Session;
 
-class AdminTaskController extends Controller
+class LanguageController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,20 +17,25 @@ class AdminTaskController extends Controller
      */
     public function index()
     {
-        $tasks = Task::all();
-        return view('admin.task.index',compact('tasks'));
+
+        $language = Language::all();
+        foreach ($language as $lang){
+            $lang->status = Language::check($lang->compiler_url,$lang->user,$lang->password);
+
+        }
+
+        return view('admin.language.index',compact('language'));
     }
 
-    /**
+    /**AD
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function create()
     {
-        $programingLanguage = Language::pluck('name','id');
-        $categoryTask = CategoryTask::pluck('name','id');
-        return view('admin.task.create',compact(['categoryTask','programingLanguage']));
+
+        return view('admin.language.create');
     }
 
     /**
@@ -41,10 +46,8 @@ class AdminTaskController extends Controller
      */
     public function store(Request $request)
     {
-        $input= $request->all();
-
-        Task::create($input);
-        return redirect('/admin/task');
+        Language::create( $request->all());
+        return redirect('/admin/language');
     }
 
     /**
@@ -55,12 +58,7 @@ class AdminTaskController extends Controller
      */
     public function show($id)
     {
-        $programingLanguage = Language::pluck('name','id');
-        $categoryTask = CategoryTask::pluck('name','id');
-
-
-        $task = Task::findOrFail($id);
-        return view('admin.task.show',compact('task','programingLanguage','categoryTask'));
+        //
     }
 
     /**
@@ -71,12 +69,10 @@ class AdminTaskController extends Controller
      */
     public function edit($id)
     {
-        $programingLanguage = Language::pluck('name','id');
-        $categoryTask = CategoryTask::pluck('name','id');
 
+        $language = Language::findOrFail($id);
+        return view('admin.language.edit',compact('language'));
 
-        $task = Task::findOrFail($id);
-        return view('admin.task.edit',compact('task','programingLanguage','categoryTask'));
     }
 
     /**
@@ -88,10 +84,9 @@ class AdminTaskController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $task = Task::findOrFail($id);
-        $input= $request->all();
-        $task->update($input);
-        return redirect('/admin/task');
+        $language = Language::findOrFail($id);
+        $language->update($request->all());
+        return redirect('/admin/language');
     }
 
     /**
@@ -102,6 +97,12 @@ class AdminTaskController extends Controller
      */
     public function destroy($id)
     {
-        //
+
+        $language = Language::findOrFail($id);
+
+        $language->delete();
+        Session::flash('deleted_language','The language has been deleted');
+
+        return redirect('/admin/language');
     }
 }

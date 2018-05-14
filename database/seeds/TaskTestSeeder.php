@@ -16,7 +16,7 @@ class TaskTestSeeder extends Seeder
 
         DB::table('task_tests')->insert([
             [
-                'name' => 'Dve cisla',
+                'name' => 'Dve_cisla',
                 'type' => '1',
                 'level_id' =>1,
                 'code'=>'
@@ -24,12 +24,12 @@ import unittest
 import usercode
 class TestCalc(unittest.TestCase):
     def test_add(self):
-        result = usercode.sum(2,2)
+        result = mysumm(2,2)
         self.assertEqual(result,4)',
             ],
 
             [
-                'name' => 'Dve cisla 2',
+                'name' => 'Dve_cisla_2',
                 'type' => '1',
                 'level_id' =>1,
                 'code'=>'
@@ -37,33 +37,31 @@ import unittest
 import usercode
 class TestCalc(unittest.TestCase):
     def test_add(self):
-        result = usercode.sum(2,3)
+        result = mysum(2,3)
         self.assertEqual(result,5)',
             ],
 
 
         [
-            'name' => 'Dve lubovolne cisla  ',
+            'name' => 'Dve_lubovolne_cisla  ',
             'type' => '1',
             'level_id' =>2,
             'code'=>'
 import unittest
-import usercode
 class TestCalc(unittest.TestCase):
     def test_add(self):
-        result = usercode.sum(-2,3)
+        result = mysum(-2,3)
         self.assertEqual(result,1)',
         ],
                 [
-                    'name' => 'Dve lubovolne cisla 2 ',
+                    'name' => 'Dve_lubovolne_cisla_2 ',
                     'type' => '1',
                     'level_id' =>2,
                     'code'=>'
 import unittest
-import usercode
 class TestCalc(unittest.TestCase):
     def test_add(self):
-        result = usercode.sum(-2,-3)
+        result = mysum(-2,-3)
         self.assertEqual(result,-5)',
                 ]
 

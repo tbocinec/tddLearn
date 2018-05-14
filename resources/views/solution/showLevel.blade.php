@@ -85,6 +85,9 @@
             <div class="row">
                 <div class="col-xs-12">
                     <h3>List of test</h3>
+                    @if(isset($serverError) && $serverError )
+                        <div class="alert alert-danger"><strong>ERROR</strong> TEST SERVER IS DOWN</div>
+                    @endif
                     @foreach($tests as $test)
                         <a href="/solution/{{$solution->id}}/level/{{$level->id}}/test/{{$test->id}}">
                             <div> Test  <b>{{$test->name}}</b>
@@ -95,7 +98,7 @@
                                         --Neuspešny test
                                     @endif
                                 @else
-                                    ---Test Nebol spusteny
+                                    --Test Nebol spusteny
                                 @endif
                             </div>
                         </a>
@@ -124,9 +127,14 @@
 
     var textarea = $('textarea[name="code"]');
     textarea.val(editor.getSession().getValue());
+
+
     editor.getSession().on("change", function () {
         textarea.val(editor.getSession().getValue());
     });
+    editor.session.setOptions({ tabSize: 4, useSoftTabs: true });
+
+    editor.setFontSize(25);
     </script>
 @endsection
 

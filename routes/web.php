@@ -36,6 +36,8 @@ Route::group(['middleware'=>'admin'],function (){
     Route::get('admin/task/{task_id}/task-level/{level_id}/test/create','TaskTestController@create');
     Route::get('admin/task/{task_id}/task-level/{level_id}/test/{id}','TaskTestController@edit');
 
+    Route::resource('admin/language','LanguageController');
+
 
 });
 

@@ -39,7 +39,7 @@
                 <td><a href="{{route('task.show',$task->id)}}"> {{$task->name}}</a></td>
 
                 <td>{{$task->category->name}}</td>
-                <td>{{$task->programingLanguage->name}}</td>
+                 <td>{{$task->programingLanguage->name}}</td>
                 <td>{{$task->description}}</td>
                 <td>{{$task->active}}</td>
 

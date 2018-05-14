@@ -9,6 +9,7 @@ use App\TaskTest;
 use App\UserCode;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 
 class UserTestController extends Controller
 {
@@ -64,7 +65,20 @@ class UserTestController extends Controller
         $actualTest = TaskTest::findOrFail($test_id);
 
         $tests = TaskTest::where([['level_id',$level_id]])->get();
-        return view('solution.showLevel',compact('solution','task','level','codes','actualTest','tests'));
+
+
+        //check test
+        $errorStatus =  Session::get('ErrorStatus-' . $solution_id);
+        foreach ($tests as $test){
+            if(Session::get('test-'.$solution_id.'-'.$test->name) ==  1){
+                $test['success'] = 1;
+            }
+            else{
+                $test['success'] = 0;
+            }
+        }
+
+        return view('solution.showLevel',compact('solution','task','level','codes','actualTest','tests','errorStatus'));
     }
 
     /**

@@ -18,6 +18,8 @@ class CreateProgramingLanguagesTable extends Migration
             $table->string("name");
             $table->string("compiler_url");
             $table->integer("active");
+            $table->string('user');
+            $table->string('password');
             $table->timestamps();
         });
     }

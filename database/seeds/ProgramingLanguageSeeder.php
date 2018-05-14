@@ -15,65 +15,87 @@ class ProgramingLanguageSeeder extends Seeder
         DB::table('programing_languages')->truncate();
 
 
-        ProgramingLanguage::create([
+        \App\Language::create([
             'name' => 'Python',
-            'compiler_url' => 'localhost:8081',
+            'compiler_url' => 'http://localhost:8080',
+            'user' => 'tomas',
+            'password' => 'tomas',
             'active' => 1,
         ]);
 
-        ProgramingLanguage::create([
+        \App\Language::create([
+            'name' => 'C++',
+            'compiler_url' => 'http://localhost:8081',
+            'user' => 'tomas',
+            'password' => 'tomas',
+            'active' => 1,
+        ]);
+
+        \App\Language::create([
             'name' => 'Java',
             'compiler_url' => 'localhost:8081',
-            'active' => 1,
+            'user' => 'tomas',
+            'password' => 'tomas',
+            'active' => 0,
         ]);
 
-        ProgramingLanguage::create([
-            'name' => 'C++',
-            'compiler_url' => 'localhost:8081',
-            'active' => 1,
-        ]);
 
-        ProgramingLanguage::create([
+
+        \App\Language::create([
             'name' => 'Javascript',
             'compiler_url' => 'localhost:8081',
-            'active' => 1,
+            'user' => 'tomas',
+            'password' => 'tomas',
+            'active' => 0,
         ]);
 
-        ProgramingLanguage::create([
+        \App\Language::create([
             'name' => 'Scala',
             'compiler_url' => 'localhost:8081',
-            'active' => 1,
+            'user' => 'tomas',
+            'password' => 'tomas',
+            'active' => 0,
         ]);
 
-        ProgramingLanguage::create([
+        \App\Language::create([
             'name' => 'Swift',
             'compiler_url' => 'localhost:8081',
-            'active' => 1,
+            'user' => 'tomas',
+            'password' => 'tomas',
+            'active' => 0,
         ]);
 
-        ProgramingLanguage::create([
+        \App\Language::create([
             'name' => 'Ruby',
             'compiler_url' => 'localhost:8081',
-            'active' => 1,
+            'user' => 'tomas',
+            'password' => 'tomas',
+            'active' => 0,
         ]);
 
 
-        ProgramingLanguage::create([
+        \App\Language::create([
             'name' => 'Go',
             'compiler_url' => 'localhost:8081',
-            'active' => 1,
+            'user' => 'tomas',
+            'password' => 'tomas',
+            'active' => 0,
         ]);
 
-        ProgramingLanguage::create([
+        \App\Language::create([
             'name' => 'PHP',
             'compiler_url' => 'localhost:8081',
-            'active' => 1,
+            'user' => 'tomas',
+            'password' => 'tomas',
+            'active' => 0,
         ]);
 
-        ProgramingLanguage::create([
-            'name' => ' #',
+        \App\Language::create([
+            'name' => 'C #',
             'compiler_url' => 'localhost:8081',
-            'active' => 1,
+            'user' => 'tomas',
+            'password' => 'tomas',
+            'active' => 0,
         ]);
 
 
